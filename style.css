@@ -1,0 +1,350 @@
+body{
+	margin: 0;
+	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+	-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+#top{
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	background: #140b1e;
+	margin-bottom: 10px;
+	z-index: 3;
+}
+
+#menuButton{
+	border: white 2px solid;
+	border-radius: 5px;
+	position: absolute;
+	top: 29px;
+	left: 19px;
+	height: 38px;
+	width: 38px;
+	vertical-align: middle;
+	padding: 0px 0px 0px 0px;
+}
+
+.sticks{
+	vertical-align: middle;
+	border: white 2px solid;
+	background: white;
+	border-radius: 10px;
+	height: 2px;
+	width: 30px;
+	margin: 5px 0px 5px 2px;
+	display: solid;
+}
+
+#menuBar{
+	display: solid;
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	top: 0px;
+	left:  -250px;
+	background: #140b1e;
+	text-align: center;
+	user-select: none;
+	z-index: 4;
+}
+
+#ToolText{
+	color: white;
+	margin: 5px;
+	font-size: 20px;
+	text-align: left;
+}
+
+#projectName{
+	color: white;
+	font-size: 20px;
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: 50%;
+	right: 61px;
+	transform: translateY(-50%);
+	outline: none;
+	text-align: center;
+	width: 200px;
+}
+
+#plus{
+	position: absolute;
+	top: -2px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#adder{
+	border: white 2px solid;
+	border-radius: 5px;
+	position: absolute;
+	top: 29px;
+	right: 19px;
+	height: 38px;
+	width: 38px;
+	vertical-align: middle;
+	padding: 0px 0px 0px 0px;
+	color: white;
+	text-align: center;
+	font-size: 34px;
+	user-select: none;
+}
+
+#adder:hover{
+	border-color: yellow;
+	color: yellow;
+	font-weight: bold;
+}
+
+#Menu{
+	color: white;
+	margin: 21px;
+	font-size: 50px;
+}
+
+.TB{
+	position: absolute;
+	background: none;
+	border: none;
+	border-radius: 6px;
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+}
+
+.txt{
+	position: absolute;
+	color: grey;
+	width: 160px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 70px;
+	text-align: left;
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 30px;
+	user-select: none;
+}
+
+#aboutProgram{
+	left: 0;
+	font-size: 20px;
+	width: 240px;
+	text-align: center;
+}
+
+#aboutProgram:hover{
+	color: #c9c9c9;
+	font-size: 25px;
+}
+
+#form2{
+	position: absolute;
+	top: 10px;
+	left: 5px;
+}
+
+#colorpicker{
+	border: transparent 1px soled;
+	width: 234px;
+	height: 54px;
+	border-radius: 6px;
+
+}
+
+#polz{
+	color: blue;
+	background: blue;
+	width: 220px;
+}
+
+.txt:hove{
+	text-align: center;
+	color: #c9c9c9;
+	font-size: 35px;
+}
+
+.cell{
+	position: relative;
+	width: 240px;
+	height: 60px;
+	margin: 5px;
+}
+
+#ToolBar{
+	position: relative;
+	margin-top: 10px;
+	width: 250px;
+	text-align: left;
+}
+
+.stylebox{
+	position: relative;
+	margin: 5px;
+	width: 240px;
+	height: 60px;
+	border-radius: 6px;
+	background: white;
+}
+
+.svgs{
+	margin: 3px;
+	width: 54px;
+	height: 54px;
+}
+
+.cnvs_holder{
+	position: relative;
+	top: 110px;
+	left: 260px;
+	border: black 1px solid;
+	margin-right: 10px;
+	display: block;
+}
+
+.Tab{
+	position: relative;
+	background: white;
+	height: 21px;
+	width: 150px;
+	border: white 1px solid;
+	border-radius: 5px 5px 0px 0px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 2px;
+}
+
+#Tabs{
+	position: relative;
+	top: 77px;
+}
+
+.Naming{
+	position: absolute;
+	left: 5px;
+	display: inline-block;
+	user-select: none;
+	width: 125px;
+}
+
+.cross{	
+	position: absolute;
+	right: 5px;
+	font-size: 10px;
+	display: inline-block;
+	text-align: center;
+	
+	border-color: transparent;
+	border-radius: 25px;
+	width: 20px;
+	height: 20px;
+	padding: 0px;
+	background: transparent;
+	font-weight: bold;
+	user-select: none;
+}
+
+.cross:hover {	
+	background: #c9c9c9;
+}
+
+.cnvs{
+	position: absolute;
+	z-index: 1;
+}
+
+.cnvs2{
+	position: absolute;
+	z-index: 2;
+}
+
+.pict{
+	fill: #a1a1a1;
+}
+
+.popup{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+	display: none;
+	top: 0;
+	left: 0;
+}
+
+.popup_body{
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+}
+
+.popup_content{
+	position: relative;
+
+	background: white;
+	color: black;
+	border: none;
+	width: 400px;
+	height: 200px;
+	padding: 30px;
+}
+
+#pop_text{
+	text-align: center;
+	margin: 20px;
+	font-size: 25px;
+	font-weight: bolder;
+
+}
+
+#jpg{
+	position: absolute;
+	left: 40px;
+}
+
+#bmp{
+	position: absolute;
+	right: 40px;
+}
+
+.pop_button{
+	display: inline-block;
+	border: 2px black solid;
+	border-radius: 10px;
+	width: 140px;
+	height: 50px;
+	margin: 25px;
+	background: none;
+	text-align: center;
+	font-size: 40px;
+}
+
+.pop_button:hover{
+	color: white;
+	background: black;
+	font-weight: bold;
+
+}
+
+#winCross{
+	position: absolute;
+	width: 50px;
+	top: 0px;
+	right: 0px;
+
+}
+
+#popup1{
+	display: none;
+}

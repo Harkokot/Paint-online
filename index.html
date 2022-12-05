@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <script src="JavaScript.js?v=2"></script>
+    </head>
+    <body onload="init();">
+        <div id="popup1" class="popup">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <div id="pop_text">Выберите формат сохранения: </div>
+                    <div class="pop_button" id="jpg"  onclick="Downloader(0);">.jpeg</div>
+                    <div class="pop_button" id="bmp" onclick="Downloader(1);">.bmp</div>
+                </div>
+            </div>
+        </div>
+        <div id="popup2" class="popup">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <div id="pop_text">О программе: </div>
+                    <div class="pop_button" id="winCross"  onclick="abouterClose();">X</div>
+                    <div class="pop_long_text"><p>Программу разработал студент второго курса Программной инженерии Думкин Никита Алексеевич.</p>
+                        <p>По вопросам просьба обращаться с письмами на почту: nadumkin@edu.hse.ru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--    <div id="popup2" class="popup">
+            <div class="popup_body">
+                <div class="popup_content">
+                    
+                </div>
+            </div>
+        </div> -->
+        <div id="top">
+            <div id="menuButton" onclick="barInteraction();">
+                <div class="sticks"></div>
+                <div class="sticks"></div>
+                <div class="sticks"></div>
+            </div>
+            <form id="form">
+                <input type="text" id="projectName" placeholder="Name the canvas">
+            </form>
+            <div id="adder" onclick="creating();"><div id="plus">+</div></div>
+            <div id="Tabs"></div>
+        </div>
+
+        <div id="menuBar">
+            <div id="Menu">Меню</div>
+            <div id="ToolText">Выбор инструмента</div>
+            <div id="ToolBar">
+                <div class="cell">
+                    <div id="tool0" class="TB" onclick="toolChange(0);" onmouseover="toolHover(0);" onmouseout = "toolOut(0);">
+                        <svg class="svgs" style="enable-background:new 0 0 446.8 442.4;" version="1.1" viewBox="0 0 446.8 442.4" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="svg0" class="pict">
+                            <path d="M429.6,117l-99.7-99.7C318.7,6.1,303.9,0,288.1,0c-15.8,0-30.6,6.1-41.7,17.2L230,33.6c-11.1,11.1-17.2,25.9-17.2,41.7  c0,11.8,3.4,23,9.8,32.6l-135,69c-27.9,14.2-47.4,40-53.6,70.7L0,415.9l26.5,26.5l168.2-33.9c30.7-6.2,56.5-25.7,70.7-53.6  l68.6-134.2c10.8,8.9,24.1,13.4,37.4,13.4c15.1,0,30.2-5.8,41.7-17.3l16.4-16.4C452.6,177.5,452.6,140,429.6,117z M239.2,341.5  c-10.1,19.8-28.4,33.7-50.2,38.1L57.1,406.2l81.3-81.3c5,2.3,10.4,3.5,15.8,3.5c9.7,0,19.5-3.7,26.9-11.1l0,0  c14.8-14.8,14.8-39,0-53.8c-14.8-14.8-39-14.8-53.8,0c-10.7,10.7-13.6,26.2-8.9,39.6l-82.2,82.2l26.5-131.8  c4.4-21.8,18.3-40.1,38.1-50.2l142.4-72.8l68.6,68.6L239.2,341.5z M148.2,284.4c1.7-1.7,3.8-2.5,6-2.5c2.2,0,4.4,0.8,6,2.5  c3.3,3.3,3.3,8.7,0,12c-3.3,3.3-8.7,3.3-12,0C144.9,293.1,144.9,287.7,148.2,284.4z M408.7,179.6L392.3,196  c-5.5,5.5-13,8.6-20.9,8.6c-7.9,0-15.3-3.1-20.9-8.6l-99.7-99.7c-5.5-5.5-8.6-13-8.6-20.9c0-7.9,3.1-15.3,8.6-20.9l16.4-16.4  c5.5-5.5,13-8.6,20.9-8.6s15.3,3.1,20.9,8.6l99.7,99.7C420.2,149.4,420.2,168.1,408.7,179.6z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div id="txt0" class="txt"  onclick="toolChange(0);" onmouseover="toolHover(0);" onmouseout = "toolOut(0);">
+                        Перо
+                    </div>
+                </div>
+                <div class="cell">
+                    <div id="tool1" class="TB" onclick="toolChange(1);" onmouseover="toolHover(1);" onmouseout = "toolOut(1);">
+                        <svg class="svgs" style="enable-background:new 0 0 442 442;" version="1.1" viewBox="0 0 442 442" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="svg1" class="pict"><path d="M434,34.9L407.1,8C396.4-2.7,379-2.7,368.2,8L8,368.2C-2.7,379-2.7,396.4,8,407.1L34.9,434c5.4,5.4,12.4,8,19.4,8   c7,0,14.1-2.7,19.4-8L434,73.8C444.7,63.1,444.7,45.6,434,34.9z M407.8,54.3L54.3,407.8l-20.1-20.1L387.7,34.2L407.8,54.3z"/></g></svg>
+                    </div>
+                    <div id="txt1" class="txt"  onclick="toolChange(1);" onmouseover="toolHover(1);" onmouseout = "toolOut(1);">
+                        Линия
+                    </div>
+                </div>
+                <div class="cell">
+                    <div id="tool2" class="TB"   onclick="toolChange(2);" onmouseover="toolHover(2);" onmouseout = "toolOut(2);">
+                        <svg class="svgs" style="enable-background:new 0 0 589.3 442;" version="1.1" viewBox="0 0 589.3 442" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g  id="svg2" class="pict"><path d="M589.3,216.6c0-15.5-8.3-29-20.6-36.5V79.3c12.3-7.5,20.6-21.1,20.6-36.5c0-23.6-19.2-42.8-42.8-42.8   c-15.5,0-29,8.3-36.5,20.6H338.5C331,8.3,317.5,0,302,0c-15.5,0-29,8.3-36.5,20.6H79.3C71.8,8.3,58.3,0,42.8,0   C19.2,0,0,19.2,0,42.8C0,57,7,69.6,17.7,77.4V182C7,189.8,0,202.4,0,216.6c0,14.2,7,26.8,17.7,34.6v113.5C7,372.4,0,385,0,399.2   C0,422.8,19.2,442,42.8,442c15.5,0,29-8.3,36.5-20.6h186.2C273,433.7,286.5,442,302,442c15.5,0,29-8.3,36.5-20.6H510   c7.5,12.3,21.1,20.6,36.5,20.6c23.6,0,42.8-19.2,42.8-42.8c0-15.5-8.3-29-20.6-36.5V253.1C581,245.6,589.3,232.1,589.3,216.6z    M42.8,409.4c-5.6,0-10.2-4.6-10.2-10.2c0-5.6,4.6-10.2,10.2-10.2c5.6,0,10.2,4.6,10.2,10.2C53,404.9,48.4,409.4,42.8,409.4z    M42.8,32.6c5.6,0,10.2,4.6,10.2,10.2S48.4,53,42.8,53c-5.6,0-10.2-4.6-10.2-10.2S37.1,32.6,42.8,32.6z M312.2,399.2   c0,5.6-4.6,10.2-10.2,10.2c-5.6,0-10.2-4.6-10.2-10.2c0-1.1,0.2-2.2,0.5-3.2c1.3-4.1,5.1-7.1,9.7-7.1c4.6,0,8.4,3,9.7,7.1   C312,397.1,312.2,398.1,312.2,399.2z M339.1,378c-7.4-12.9-21.2-21.6-37.1-21.6c-15.7,0-29.5,8.6-36.9,21.2   C168.5,366,92.3,311.4,76.7,242.5c5.5-7.2,8.9-16.2,8.9-26c0-9.8-3.3-18.7-8.9-26c15.3-68,89.8-122.1,184.6-134.6   c5.6,17.2,21.7,29.6,40.7,29.6c19.1,0,35.4-12.6,40.8-30c90.4,11.2,162.9,60.1,184,123c-13.7,7.1-23.1,21.5-23.1,38   s9.4,30.8,23.1,38C505.4,318.3,431.3,367.7,339.1,378z M42.8,206.3c2.9,0,5.6,1.3,7.4,3.3c1.7,1.8,2.8,4.3,2.8,7   c0,2.7-1.1,5.1-2.8,7c-1.9,2-4.5,3.3-7.4,3.3c-0.4,0-0.8-0.1-1.2-0.1c-5.1-0.6-9-4.9-9-10.1c0-5.2,4-9.5,9-10.1   C42,206.4,42.4,206.3,42.8,206.3z M312.2,42.8c0,5.6-4.6,10.2-10.2,10.2c-5.6,0-10.2-4.6-10.2-10.2c0-2.1,0.6-4.1,1.7-5.7   c1.8-2.7,5-4.5,8.5-4.5c3.5,0,6.6,1.8,8.4,4.5C311.6,38.7,312.2,40.7,312.2,42.8z M536.3,216.6c0-5.6,4.6-10.2,10.2-10.2   c0.9,0,1.7,0.1,2.6,0.4c4.4,1.1,7.7,5.1,7.7,9.9c0,4.8-3.3,8.7-7.7,9.9c-0.8,0.2-1.7,0.4-2.6,0.4   C540.9,226.8,536.3,222.2,536.3,216.6z M546.5,53c-5.6,0-10.2-4.6-10.2-10.2s4.6-10.2,10.2-10.2c5.6,0,10.2,4.6,10.2,10.2   S552.1,53,546.5,53z M505,53.2c3.8,15.2,15.8,27.2,31.1,31.1v42C515.5,96.7,485,71.5,448,53.2H505z M50.2,165.8V84.9   c16.6-2.9,30-15.5,34-31.7H159C106.4,79.2,67,119.1,50.2,165.8z M84.3,388.8c-4.1-16.2-17.4-28.8-34-31.7v-89.7   c18.8,52.3,65.9,96.1,128.3,121.4H84.3z M536.1,306.9v50.9c-15.2,3.8-27.3,15.8-31.1,31.1h-76.6   C474.3,370.2,511.9,341.5,536.1,306.9z M546.5,409.4c-5.6,0-10.2-4.6-10.2-10.2c0-5.6,4.6-10.2,10.2-10.2c5.6,0,10.2,4.6,10.2,10.2   C556.7,404.9,552.1,409.4,546.5,409.4z"/></g></svg>
+                    </div>
+                    <div id="txt2" class="txt"   onclick="toolChange(2);" onmouseover="toolHover(2);" onmouseout = "toolOut(2);">
+                        Эллипс
+                    </div>
+                </div>
+                <div class="cell">
+                    <div id="tool3" class="TB"  onclick="toolChange(3);" onmouseover="toolHover(3);" onmouseout = "toolOut(3);">
+                        <svg class="svgs" style="enable-background:new 0 0 439.7 442;" version="1.1" viewBox="0 0 439.7 442" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g  id="svg3" class="pict"><path d="M264.5,378.6c22.2,0,44.1-9.8,58.7-28.6l100.6-129.3c25.2-32.3,19.4-79.1-13-104.3L281.7,15.7C266,3.5,246.5-1.9,226.8,0.6   C207.1,3,189.5,13,177.3,28.7L76.7,157.9c-17.4,22.3-20,51.4-9.3,75.7l-30.2,38.8c-23.5,30.1-18,73.7,12.1,97.2l49.9,39l-98.9,0.5   L0,441.7l278.4,0.3l0.1-32.6l-51.5-0.3l25-31.7C256.2,378.2,260.4,378.6,264.5,378.6z M261.6,41.4L390.9,142   c8.8,6.9,14.4,16.7,15.8,27.8c1.4,11.1-1.6,22-8.5,30.8L297.5,329.9c-6.9,8.8-16.7,14.4-27.8,15.8c-11,1.4-22-1.6-30.8-8.5   L109.7,236.6c-18.2-14.1-21.4-40.4-7.3-58.6L203,48.7C203,48.7,227,17.1,261.6,41.4z M185.8,409l-33.5-0.2l-83-64.9   c-16-12.4-18.8-35.5-6.4-51.5l24.8-31.9c0.7,0.6,1.3,1.2,2,1.7l129.3,100.6c0.7,0.5,1.4,1,2,1.5L185.8,409z"/><rect height="32.6" width="67.8" x="310.8" y="409.4"/><rect height="32.6" width="33.1" x="406.5" y="409.4"/></g></svg>
+                    </div>
+                    <div id="txt3" class="txt" onclick="toolChange(3);" onmouseover="toolHover(3);" onmouseout = "toolOut(3);">
+                        Ластик
+                    </div>
+                </div>
+                <div class="cell">
+                    <div id="tool4" class="TB" onclick="toolChange(4);" onmouseover="toolHover(4);" onmouseout = "toolOut(4);">
+                        <svg version="1.1" class="svgs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 491.115 491.115" style="enable-background:new 0 0 491.115 491.115;" xml:space="preserve">
+                        <g id="svg4" class="pict">
+                            <path d="M475.624,177.416l-154.417-13.033l-60.067-142.8c-2.55-6.233-8.783-10.483-15.583-10.483s-13.033,3.967-15.583,10.483
+                                l-60.067,142.8L15.491,177.416c-6.8,0.567-12.75,5.1-14.733,11.617s0,13.6,5.1,18.133l117.017,101.15L87.741,459.049
+                                c-1.417,6.8,1.133,13.6,6.517,17.567c5.667,3.967,13.033,4.25,18.7,0.85l132.6-80.183l132.6,80.183
+                                c2.833,1.7,5.667,2.55,8.783,2.55c3.4,0,7.083-1.133,9.917-3.117c5.667-3.967,8.217-11.05,6.517-17.567l-35.133-150.733
+                                l117.017-101.15c5.1-4.533,7.083-11.617,5.1-18.133C488.374,182.516,482.424,177.983,475.624,177.416z M338.208,289.616
+                                c-4.817,4.25-6.8,10.483-5.383,16.717l28.333,121.55l-106.817-64.6c-2.833-1.7-5.667-2.55-8.783-2.55
+                                c-3.117,0-6.233,0.85-8.783,2.55l-106.817,64.6l28.333-121.55c1.417-6.233-0.567-12.467-5.383-16.717l-94.35-81.6l124.383-10.483
+                                c6.233-0.567,11.9-4.533,14.167-10.2l48.45-115.317l48.45,115.033c2.55,5.95,7.933,9.917,14.167,10.2l124.383,10.483
+                                L338.208,289.616z"/>
+                        </g>
+                    </div>
+                    <div id="txt4" class="txt" onclick="toolChange(4);" onmouseover="toolHover(4);" onmouseout = "toolOut(4);">
+                        Звезда
+                    </div>
+                </div>
+            </div>
+            <div class="stylebox">
+                <form oninput="outp.value=parseFloat(polz.value)" id="form2">
+                    <input type="range" min="1" max="100" step="1" value="20" id="polz">
+                    <output name="outp" id="outp" for="polz">20</output>
+                </form>
+            </div>
+            <div class="stylebox">
+                <input type="color" value="#000000" id="colorpicker">
+            </div>
+            <div class="stylebox">
+                <form id = 'upload' enctype="multipart/form-data" method="post"> 
+                    <p><input type="file" name="pict" id="f" accept="image/jpeg,image/bmp"></p>
+                    <input type="submit" id='ss' class = 'dwnBtn' value="Открыть">
+                    <input type="button" class = 'dwnBtn' value="Скачать" onclick="preDownloader();">
+                </form>
+            </div>
+            <div class="cell">
+                    <div id="aboutProgram" class="txt" onclick="abouter();">
+                        О программе
+                    </div>
+                </div>
+        </div>
+        <div id="holder"></div>
+    </body>
+</html>
